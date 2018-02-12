@@ -1,2 +1,4 @@
 # InfViewer
-Software Design Project
+## Software Design Project
+
+Group Members: Marija Kukic, Smiljana Tedic, Milana Carapic and Maja Gulan
