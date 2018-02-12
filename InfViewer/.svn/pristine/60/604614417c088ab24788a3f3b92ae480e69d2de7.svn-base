@@ -1,0 +1,1364 @@
+{
+	"package": [{
+
+		"packageName": "PSW_2017",
+		"labela": "PSW_2017",
+		"type": "system",
+		"komePripada": "",
+
+		"package": [{
+			"packageName": "01_TeritorijalnoPolitickaOrganizacija",
+			"labela": "01_TERITORIJALNOPOLITICKAORGANIZACIJA",
+			"type": "subsystem",
+			"komePripada": "PSW_2017",
+			"package" : [
+			{
+				"packageName": "package1",
+				"labela": "PACKAGE_1",
+				"type" : "package",
+				"komePripada" : "01_TERITORIJALNOPOLITICKAORGANIZACIJA",
+				"tables": [{
+					"name": "Tip politicke organizacije",
+					"labela": "TIP_POLITICKE_ORGANIZACIJE",
+					"komePripada": "PACKAGE_1",
+					"columns" : [
+				{
+					"name" : "Oznaka"   ,
+					"labela" : "VTO_OZNAKA" ,
+					"dataType" : "char", 
+					"precision" : 4, 
+					"length": 2,
+					"primary key": "true",		
+					"nullValue": "false" 
+				},
+				{
+					"name" : "Od kada"   ,
+					"labela" : "VTO_NAZIV" ,
+					"dataType" : "varchar", 
+					"precision" : 4, 
+					"length": 2,
+					"primary key": "false",		
+					"nullValue": "false" 
+				}
+				]
+				
+				},
+				{
+					
+						"name": "Poslovni sistem",
+						"labela": "POSLOVNI_SISTEM",
+						"komePripada" : "POLITICKA_ORGANIZACIJA",
+						"columns" : [
+					{
+						"name" : "Oznaka2"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oznaka"   ,
+						"labela" : "TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps identitet"   ,
+						"labela" : "PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps naziv"   ,
+						"labela" : "PS_NAZIV" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps adresa"   ,
+						"labela" : "PS_ADRESA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},{
+						"name" : "Nme identitet"   ,
+						"labela" : "NME_IDENT" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps www"   ,
+						"labela" : "PS_WWW" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps email"   ,
+						"labela" : "PS_E_MAIL" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps telefon"   ,
+						"labela" : "PS_TELEFON" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Tps oznaka"   ,
+						"labela" : "TPS_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pos ps ident"   ,
+						"labela" : "POS_PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					]
+				},{
+						
+					
+							"name": "Sastav",
+							"labela": "SASTAV",
+							"komePripada" : "POSLOVNI_SISTEM",
+							"columns" : [
+					{
+						"name" : "Oznaka2"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oznaka"   ,
+						"labela" : "TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps identitet"   ,
+						"labela" : "PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pos vto oznaka"   ,
+						"labela" : "POS_VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pos tpo oznaka"   ,
+						"labela" : "POS_TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pos ps ident"   ,
+						"labela" : "POS_PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					}
+					]
+					},
+			
+				{
+			
+					"name": "Politicka organizacija",
+					"labela": "POLITICKA_ORGANIZACIJA",
+					"komePripada" : "PACKAGE_1",
+					"columns" : [
+					{
+						"name" : "Oznaka2"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oznaka"   ,
+						"labela" : "TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Tpo naziv"   ,
+						"labela" : "TPO_NAZIV" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 120,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Nme identitet"   ,
+						"labela" : "NME_IDENT" ,
+						"dataType" : "bigint", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pol vto oznaka"   ,
+						"labela" : "POL_VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pol tpo oznaka"   ,
+						"labela" : "POL_TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}]
+				},{
+						
+								"name": "Sastav jedinice",
+								"labela": "SASTAV_JEDINICE",
+								"komePripada" : "ORANIZACIONE_JEDINICE",
+								"columns" : [
+					{
+						"name" : "Oznaka2"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oznaka23"   ,
+						"labela" : "TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps ident"   ,
+						"labela" : "PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Oj oznaka"   ,
+						"labela" : "OJ_OZNAKA" ,
+						"dataType" : "numeric", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Org oj oznaka"   ,
+						"labela" : "ORG_OJ_OZNAKA" ,
+						"dataType" : "numeric", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					}
+					
+					]
+					},
+				{	"name": "Struktura",
+					"labela": "STRUKTURA",
+					"komePripada" : "PACKAGE_1",
+					"columns" : [
+					{
+						"name" : "Oznaka2"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oznaka"   ,
+						"labela" : "TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pol vto oznaka"   ,
+						"labela" : "POL_VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pol tpo oznaka2"   ,
+						"labela" : "POL_TPO_OZNAKA2" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					}
+					]
+				},{
+					
+							"name": "Organizacione jedinice",
+							"labela": "ORGANIZACIONE_JEDINICE",
+							"komePripada" : "PACKAGE_1",
+							"columns" : [
+					{
+						"name" : "Oznaka2"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oznaka23"   ,
+						"labela" : "TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps ident"   ,
+						"labela" : "PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Oj oznaka"   ,
+						"labela" : "OJ_OZNAKA" ,
+						"dataType" : "numeric", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Oj NAZIV"   ,
+						"labela" : "OJ_NAZIV" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 80,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Oj ADRESA"   ,
+						"labela" : "OJ_ADRESA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 120,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Oj www"   ,
+						"labela" : "OJ_WWW" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 80,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Oj email"   ,
+						"labela" : "OJ_E_MAIL" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 80,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Oj TELEFON"   ,
+						"labela" : "OJ_TELEFON" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 40,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Tps oznaka"   ,
+						"labela" : "TPS_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Noj oznaka klase"   ,
+						"labela" : "NOJ_OZNAKA_KLASE" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					]
+				},{			
+						"name": "Ko je u semi",
+						"labela": "KO_JE_U_SEMI",
+						"komePripada" : "ORANIZACIONE_JEDINICE",
+						"columns" : [
+					{
+						"name" : "Org vto oznaka"   ,
+						"labela" : "ORG_VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Org tpo oznaka"   ,
+						"labela" : "ORG_TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps ident"   ,
+						"labela" : "PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},	
+					{
+						"name" : "Ver broj"   ,
+						"labela" : "VER_BROJ" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oj oznaka"   ,
+						"labela" : "OJ_OZNAKA" ,
+						"dataType" : "numeric", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					}
+					]
+					
+					},{
+						"name": "Organizaciona sema",
+						"labela": "ORGANIZACIONA_SEMA",
+						"komePripada" : "POSLOVNI_SISTEM",
+						"columns" : [
+					{
+						"name" : "Vto oznaka"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Tpo oznaka"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ps Ident"   ,
+						"labela" : "PS_IDENT" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ver broj"   ,
+						"labela" : "VER_BROJ" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ver vazi od"   ,
+						"labela" : "VER_VAZI_OD" ,
+						"dataType" : "datetime", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ver do"   ,
+						"labela" : "VER_DO" ,
+						"dataType" : "datetime", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					
+					]
+					
+					},{
+							
+				"name": "Naseljeno mesto",
+				"labela": "NASELJENO_MESTO",
+				"komePripada" : "PACKAGE_1",
+				"columns" : [
+					{
+						"name" : "Nme ident"   ,
+						"labela" : "NME_IDENT" ,
+						"dataType" : "bigint", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Nme naziv"   ,
+						"labela" : "NME_NAZIV" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 60,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+				]
+				},
+				{
+			
+					"name": "Struktura po naseljima",
+					"labela": "STRUKTURA_PO_NASELJIMA",
+					"komePripada" : "NASELJENO_MESTO",
+					"columns" : [
+					{
+						"name" : "Vto oznaka"   ,
+						"labela" : "VTO_OZNAKA" ,
+						"dataType" : "char", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Tpo oznaka"   ,
+						"labela" : "TPO_OZNAKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 4,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Nme ident"   ,
+						"labela" : "NME_IDENT" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 60,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "U koji put"   ,
+						"labela" : "U_KOJI_PUT" ,
+						"dataType" : "numeric", 
+						"precision" : 4, 
+						"length": 2,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "U od"   ,
+						"labela" : "U_OD" ,
+						"dataType" : "datetime", 
+						"precision" : 4, 
+						"length": 60,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "U do"   ,
+						"labela" : "U_DO" ,
+						"dataType" : "datetime", 
+						"precision" : 4, 
+						"length": 60,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+				]
+			}
+						
+				
+				],
+					
+		
+
+			"relations":[{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "ORGANIZACIONE_JEDINICE",
+							"childTable": "KO_JE_U_SEMI",
+							"relationship":[{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "ORG_TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "ORG_VTO_OZNAKA" 
+							},{
+								"parentColumn": "PS_IDENT",
+								"childColumn": "PS_IDENT" 
+							},{
+								"parentColumn": "VER_BROJ",
+								"childColumn": "VER_BROJ" 
+							}
+							],
+							"dependent": "true"
+							
+						},{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "NASELJENO_MESTO",
+							"childTable": "STRUKTURA_PO_NASELJIMA",
+							"relationship":[{
+								"parentColumn": "NME_IDENT",
+								"childColumn": "NME_IDENT" 
+							}
+							],
+							"dependent": "true"
+							
+						},
+						
+			
+						{		
+							"name": "PRORADI",
+							"labela": "PRORADI_PLS",
+							"parentTable": "TIP_POLITICKE_ORGANIZACIJE",
+							"childTable": "POLITICKA_ORGANIZACIJA",
+							"relationship":[{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "VTO_OZNAKA" 
+							},
+							{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "TPO_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						},{		
+							"name": "PRORADI",
+							"labela": "PRORADI_PLS",
+							"parentTable": "POLITICKA_ORGANIZACIJA",
+							"childTable": "STRUKTURA",
+							"relationship":[{
+								"parentColumn": "POL_VTO_OZNAKA",
+								"childColumn": "POL_VTO_OZNAKA" 
+							},
+							{
+								"parentColumn": "POL_TPO_OZNAKA",
+								"childColumn": "POL_TPO_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						},{		
+							"name": "PRORADI",
+							"labela": "PRORADI_PLS",
+							"parentTable": "POLITICKA_ORGANIZACIJA",
+							"childTable": "STRUKTURA_PO_NASELJIMA",
+							"relationship":[{
+								"parentColumn": "POL_VTO_OZNAKA",
+								"childColumn": "POL_VTO_OZNAKA" 
+							},
+							{
+								"parentColumn": "POL_TPO_OZNAKA",
+								"childColumn": "POL_TPO_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						},{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "POLITICKA_ORGANIZACIJA",
+							"childTable": "POSLOVNI_SISTEM",
+							"relationship":[{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "TPO_OZNKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "VTO_OZNKA" 
+							}
+							],
+							"dependent": "true"
+							
+						},{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "POSLOVNI_SISTEM",
+							"childTable": "SASTAV",
+							"relationship":[{
+								"parentColumn": "PS_IDENT",
+								"childColumn": "PS_IDENT" 
+							},{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "VTO_OZNAKA" 
+							},{
+								"parentColumn": "PS_IDENT",
+								"childColumn": "POS_PS_IDENT" 
+							},{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "POS_TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "POS_VTO_OZNAKA" 
+							}
+							],
+							"dependent": "true"
+							
+						},{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "POSLOVNI_SISTEM",
+							"childTable": "ORGANIZACIONE_JEDINICE",
+							"relationship":[{
+								"parentColumn": "PS_IDENT",
+								"childColumn": "PS_IDENT" 
+							},{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "VTO_OZNAKA" 
+							}
+							],
+							"dependent": "true"
+							
+						},{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "ORGANIZACIONE_JEDINICE",
+							"childTable": "SASTAV_JEDINICE",
+							"relationship":[{
+								"parentColumn": "OJ_OZNAKA",
+								"childColumn": "ORG_OJ_OZNAKA" 
+							},{
+								"parentColumn": "PS_IDENT",
+								"childColumn": "PS_IDENT" 
+							},{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "VTO_OZNAKA" 
+							},{
+								"parentColumn": "OJ_OZNAKA",
+								"childColumn": "OJ_OZNAKA" 
+							},{
+								"parentColumn": "PS_IDENT",
+								"childColumn": "PS_IDENT" 
+							},{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "VTO_OZNAKA" 
+							}
+							],
+							"dependent": "true"
+							
+						},{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "ORGANIZACIONA_SEMA",
+							"childTable": "KO_JE_U_SEMI",
+							"relationship":[{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "ORG_TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "ORG_VTO_OZNAKA" 
+							}
+						],"dependent": "true"
+							
+						},{		
+							"name": "NaseljenoMestoPolitickaOrganizacija",
+							"labela": "NASELJENO_MESTO_POLITICKA_ORANIZACIJA",
+							"parentTable": "POSLOVNI_SISTEM",
+							"childTable": "ORGANIZACIONA_SEMA",
+							"relationship":[{
+								"parentColumn": "PS_IDENT",
+								"childColumn": "PS_IDENT" 
+							},{
+								"parentColumn": "TPO_OZNAKA",
+								"childColumn": "TPO_OZNAKA" 
+							},{
+								"parentColumn": "VTO_OZNAKA",
+								"childColumn": "VTO_OZNAKA" 
+							}
+							],
+							"dependent": "true"
+							
+						}
+						
+
+						]
+			}]
+		},{
+			"packageName": "Poslovni sistemi",
+			"labela": "POSLOVNI_SISTEM",
+			"type": "subsystem",
+			"komePripada": "PSW_2017",
+			"package" : [
+			{
+				"packageName": "package2",
+				"labela": "PACKAGE_2",
+				"type" : "package",
+				"komePripada" : "POSLOVNI_SISTEM",
+				"tables": [{
+					"name": "Tip pravnog subjekta",
+					"labela": "TIP_PRAVNOG_SUBJEKTA",
+					"komePripada": "PACKAGE_2",
+					"columns" : [
+				{
+					"name" : "Oznaka"   ,
+					"labela" : "TPS_OZNAKA" ,
+					"dataType" : "char", 
+					"precision" : 4, 
+					"length": 1,
+					"primary key": "true",		
+					"nullValue": "false" 
+				},
+				{
+					"name" : "Od kada"   ,
+					"labela" : "TPS_NAZIV" ,
+					"dataType" : "varchar", 
+					"precision" : 4, 
+					"length": 50,
+					"primary key": "false",		
+					"nullValue": "false" 
+				}
+				]
+				},
+				{	"name": "Klasifikacija orgjed",
+					"labela": "KLASIFIKACIJA_ORGJED",
+					"komePripada": "PACKAGE_2",
+					"columns" : [
+				{
+					"name" : "Oznaka"   ,
+					"labela" : "TPS_OZNAKA" ,
+					"dataType" : "char", 
+					"precision" : 4, 
+					"length": 1,
+					"primary key": "true",		
+					"nullValue": "false" 
+				},
+				{
+					"name" : "Noj oznaka klase"   ,
+					"labela" : "NOJ_OZNAKA_KLASE" ,
+					"dataType" : "char", 
+					"precision" : 4, 
+					"length": 2,
+					"primary key": "false",		
+					"nullValue": "false" 
+				},
+				{
+					"name" : "Noj naziv"   ,
+					"labela" : "NOJ_NAZIV" ,
+					"dataType" : "varchar", 
+					"precision" : 4, 
+					"length": 60,
+					"primary key": "false",		
+					"nullValue": "false" 
+				}
+				]
+				}
+				],
+				
+				
+
+			"relations":[
+			
+						{		
+							"name": "PRORADI",
+							"labela": "PRORADI_PLS",
+							"parentTable": "TIP_PRAVNOG_SUBJEKTA",
+							"childTable": "KLASIFIKACIJA_ORGJED",
+							"relationship":[
+							{
+								"parentColumn": "TPS_OZNAKA",
+								"childColumn": "TPS_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						}
+						]
+			}]
+		},
+		
+		{
+			"packageName": "T21_sema",
+			"labela": "TS1_SEMA",
+			"type": "subsystem",
+			"komePripada": "PSW_2017",
+			"package" : [
+			{
+				"packageName": "package3",
+				"labela": "PACKAGE_3",
+				"type" : "package",
+				"komePripada" : "TS1_SEMA",
+				"tables": [{
+				"name": "Kategorija" ,
+				"labela": "KATEGORIJA",
+				"komePripada" : "PACKAGE_3",
+				"columns" : [
+					{
+						"name" : "Id kategorije"   ,
+						"labela" : "IDKATEGORIJE" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Oznaka kategorije"   ,
+						"labela" : "OZNAKAKATEGORIJE" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Naziv kategorije"   ,
+						"labela" : "NAZIVKATEGORIJE" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Opis"   ,
+						"labela" : "OPIS" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					]
+					
+					},
+					
+				{
+				"name": "Vozilo" ,
+				"labela": "VOZILO",
+				"komePripada" : "PACKAGE_3",
+				"columns" : [
+					{
+						"name" : "Id vozila"   ,
+						"labela" : "IDVOZILA" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Id kategorije"   ,
+						"labela" : "IDKATEGORIJE" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Id vlasnik"   ,
+						"labela" : "IDVLASNIK" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Marka"   ,
+						"labela" : "MARKA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Model"   ,
+						"labela" : "MODEL" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Godina proizvodnje"   ,
+						"labela" : "GODINAPROIZVODNJE" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Drzava proizvodnje"   ,
+						"labela" : "DRZAVAPROIZVODNJE" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Gorivo"   ,
+						"labela" : "GORIVO" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Pogon"   ,
+						"labela" : "POGON" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Kubikaza"   ,
+						"labela" : "KUBIKAZA" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					]		
+				
+			},
+			
+		{
+				"name": "Radnik" ,
+				"labela": "RADNIK",
+				"komePripada" : "PACKAGE_3",
+				"columns" : [
+					{
+						"name" : "Id radnik"   ,
+						"labela" : "IDRADNIK" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ime"   ,
+						"labela" : "IME" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Prezime"   ,
+						"labela" : "PREZIME" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Adresa"   ,
+						"labela" : "ADRESA" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Mesto"   ,
+						"labela" : "MESTO" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Broj telefona"   ,
+						"labela" : "BROJTELEFONA" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					
+				]
+				
+				},
+
+				
+				{
+				
+				"name": "Popravka" ,
+				"labela": "POPRAVKA",
+				"komePripada" : "PACKAGE_3",
+				"columns" : [
+					{
+						"name" : "Id popravke"   ,
+						"labela" : "IDPOPRAVKE" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Id radnik"   ,
+						"labela" : "IDRADNIK" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Id vozilo"   ,
+						"labela" : "IDVOZILO" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Datum"   ,
+						"labela" : "DATUM" ,
+						"dataType" : "datetime", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Vreme pocetka popravke"   ,
+						"labela" : "VREMEPOCETKAPOPRAVKE" ,
+						"dataType" : "datetime", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Vreme zavrsetka popravke"   ,
+						"labela" : "VREMEZAVRSETKAPOPRAVKE" ,
+						"dataType" : "datetime", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Vrsta popravke"   ,
+						"labela" : "VRSTAPOPRAVKE" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Cena popravke"   ,
+						"labela" : "CENAPOPRAVKE" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					
+					]
+					},
+				{
+					
+				"name": "Vlasnik" ,
+				"labela": "VLASNIK",
+				"komePripada" : "PACKAGE_3",
+				"columns" : [
+					{
+						"name" : "Id vlasnik"   ,
+						"labela" : "IDVLASNIK" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "true",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Ime"   ,
+						"labela" : "IME" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Prezime"   ,
+						"labela" : "PREZIME" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Mesto"   ,
+						"labela" : "MESTO" ,
+						"dataType" : "varchar", 
+						"precision" : 4, 
+						"length": 254,
+						"primary key": "false",		
+						"nullValue": "false" 
+					},
+					{
+						"name" : "Broj telefona"   ,
+						"labela" : "BROJTELEFONA" ,
+						"dataType" : "int", 
+						"precision" : 4, 
+						"length": 1,
+						"primary key": "false",		
+						"nullValue": "false" 
+					}
+					]
+				}
+				],"relations":[
+						
+				{		
+					"name": "PRORADI",
+					"labela": "PRORADI_PLS",
+					"parentTable": "RADNIK",
+					"childTable": "POPRAVKA",
+					"relationship":[
+					{
+						"parentColumn": "ID_RADNIK",
+						"childColumn": "ID_RADNIK"
+					}],
+					"dependent": "true"
+				
+				}
+				]
+			}]
+				
+		}]
+	}		
+		
+	]
+	}]
+}

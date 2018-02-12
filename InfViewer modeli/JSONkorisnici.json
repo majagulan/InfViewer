@@ -1,0 +1,55 @@
+{
+	"package": [{
+
+		"packageName": "PSW_2017",
+		"labela": "PSW_2017",
+		"type": "system",
+		"komePripada": "",
+
+		"package": [{
+			"packageName": "Korisinici",
+			"labela": "KORISNICI",
+			"type": "subsystem",
+			"komePripada": "PSW_2017",
+			"package" : [
+			{
+				"packageName": "package1",
+				"labela": "PACKAGE_1",
+				"type" : "package",
+				"komePripada" : "KORISNICI",
+				"tables": [{
+					"name": "Korisnci",
+					"labela": "KORISNICI",
+					"komePripada": "PACKAGE_1",
+					"columns" : [
+				{
+					"name" : "Korisnicko ime"   ,
+					"labela" : "USERNAME" ,
+					"dataType" : "char", 
+					"precision" : 4, 
+					"length": 30,
+					"primary key": "true",		
+					"nullValue": "false" 
+				},
+				{
+					"name" : "Sifra"   ,
+					"labela" : "PASSWORD" ,
+					"dataType" : "char", 
+					"precision" : 4, 
+					"length": 30,
+					"primary key": "false",		
+					"nullValue": "false" 
+				}
+				]
+				
+				}
+					
+			]
+		}
+		
+		
+		]
+	}]
+	}
+]
+}

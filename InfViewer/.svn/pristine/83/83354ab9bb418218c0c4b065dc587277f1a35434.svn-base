@@ -1,0 +1,595 @@
+{
+	"package" : [
+	{
+		
+		"packageName": "PSW_2017",
+		"labela": "PSW_2017",
+		"type" : "system",
+		"komePripada" : "",
+
+		"package" : [
+		{
+			"packageName": "subsistem1" ,
+			"labela": "SUBSISTEM_1",
+			"type" : "subsystem",
+			"komePripada" : "PSW_2017",
+			"package" : [
+			{
+				"packageName": "package1",
+				"labela": "PACKAGE_1",
+				"type" : "package",
+				"komePripada" : "SUBSISTEM_1",
+				"tables": [
+						{		
+			
+							"name": "Drzava" ,
+							"labela": "DRZAVA",
+							"komePripada" : "PACKAGE_1",
+							"columns":[
+							{
+								"name" : "Oznaka"   ,
+								"labela" : "DR_OZNAKA" ,
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "true",		
+								"nullValue": "false" 
+								
+							},
+							{
+								"name" : "Naziv" ,
+								"labela" :  "DR_NAZIV",
+								"dataType" : "varchar", 
+								"precision" : 4, 
+								"length": 30,
+								"primary key": "false",										
+								"nullValue": "false"										
+								
+							},
+							{
+								"name" : "Zastava" ,
+								"labela" :  "DR_ZASTAVA",
+								"dataType" : "image", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "false",										
+								"nullValue": "true"										
+								
+							},
+							{
+								"name" : "OznakaGlavnogGrada" ,
+								"labela" :  "GR_OZNAKA",
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "false",										
+								"nullValue": "false"										
+								
+							}					  
+							
+						    ]
+						},
+						{	
+						
+							"name": "Pokrajina" ,
+							"labela": "POKRAJINA" ,
+							"komePripada" : "PACKAGE_1",
+							"columns":[
+								{
+									"name" : "Oznaka" ,
+									"labela" :  "POK_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"
+								
+								
+								},
+								{
+									"name" : "U_Drzavi" ,
+									"labela" :  "U_DRZAVI",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"
+								
+								
+								},
+								{
+									"name" : "Naziv" ,
+									"labela" :  "POK_NAZIV",
+									"dataType" : "varchar", 
+									"precision" : 4, 
+									"length": 30,
+									"primary key": "false",										
+									"nullValue": "false"
+								},
+								{
+									"name" : "Zastava" ,
+									"labela" :  "POK_ZASTAVA",
+									"dataType" : "bitmap", 
+									"precision" : 4, 
+									"length": 30,
+									"primary key": "false",										
+									"nullValue": "true"										
+									
+								},{ 
+									"name" : "OznakaFakulteta" ,
+									"labela" :  "FAK_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+									
+								}
+							
+							]
+							
+						},	
+						{	
+							"name": "Grad" ,
+							"labela": "GRAD" ,
+							"komePripada" : "PACKAGE_1",
+							"columns":[
+								{
+									"name" : "Oznaka" ,
+									"labela" :  "GR_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+									
+								},
+								{
+									"name" : "Naziv" ,
+									"labela" :  "GR_NAZIV",
+									"dataType" : "varchar", 
+									"precision" : 4, 
+									"length": 30,
+									"primary key": "false",										
+									"nullValue": "false"									
+									
+								},
+								{	
+									"name" : "Oznaka"   ,
+									"labela" : "DR_OZNAKA" ,
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",		
+									"nullValue": "false" 
+								}
+							]							
+				
+						},
+						{
+							"name": "Opstina" ,
+							"labela": "OPSTINA" ,
+							"komePripada" : "PACKAGE_1",
+							"columns":[
+								{
+									"name" : "Oznaka" ,
+									"labela" :  "OPS_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+								},
+								{
+									"name" : "Naziv" ,
+									"labela" :  "OPS_NAZIV",
+									"dataType" : "varchar", 
+									"precision" : 4, 
+									"length": 30,
+									"primary key": "false",										
+									"nullValue": "false"										
+									
+								},
+								{
+									"name" : "OznakaGrada" ,
+									"labela" :  "GR_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+									
+								},
+								{
+									"name" : "OznakaDrzave" ,
+									"labela" :  "DR_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+									
+								}
+							]
+						
+						},{
+							"name": "OpstinaDete" ,
+							"labela": "OPSTINADETE" ,
+							"komePripada" : "PACKAGE_1",
+							"columns":[
+								{
+									"name" : "Oznaka" ,
+									"labela" :  "OPSDET_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+								},
+								{
+									"name" : "OznakaOpsinee" ,
+									"labela" :  "OPS_OZNAKA",
+									"dataType" : "varchar", 
+									"precision" : 4, 
+									"length": 30,
+									"primary key": "true",										
+									"nullValue": "false"										
+									
+								},
+								{
+									"name" : "OznakaDrzave" ,
+									"labela" :  "DR_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+								},
+								{
+									"name" : "OznakaGrada" ,
+									"labela" :  "GR_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+								}
+							]
+						
+						},
+						{
+							"name": "Fakultet" ,
+							"labela": "FAKULTET" ,
+							"komePripada" : "PACKAGE_1",
+							"columns":[
+								{ 
+									"name" : "Oznaka" ,
+									"labela" :  "FAK_OZNAKA",
+									"dataType" : "char", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "true",										
+									"nullValue": "false"										
+									
+								},
+								{
+									"name" : "Naziv" ,
+									"labela" :  "FAK_NAZIV",
+									"dataType" : "varchar", 
+									"precision" : 4, 
+									"length": 30,
+									"primary key": "false",										
+									"nullValue": "false"										
+								
+								},
+								{
+									"name" : "BrojStudenata" ,
+									"labela" :  "BR_STUDENATA",
+									"dataType" : "int", 
+									"precision" : 4, 
+									"length": 30,
+									"primary key": "false",										
+									"nullValue": "true"										
+								
+								},
+								{
+									"name" : "OznakaGrada" ,
+									"labela" :  "GR_OZNAKA",
+									"dataType" : "int", 
+									"precision" : 4, 
+									"length": 10,
+									"primary key": "false",										
+									"nullValue": "true"										
+									
+								}
+							]
+						
+						}
+			       	],
+			        
+					"relations":[
+			
+						{		
+							"name": "Pokrajina_se_nalazi",
+							"labela": "POKRAJINA_JE_U_DRZAVI",
+							"parentTable": "DRZAVA",
+							"childTable": "POKRAJINA",
+							"relationship":[{
+								"parentColumn": "DR_OZNAKA",
+								"childColumn": "U_DRZAVI" 
+							}],
+							"dependent": "true"
+							
+						},
+						{		
+							"name": "Opsitina_dete",
+							"labela": "OPSTINA_DETE",
+							"parentTable": "OPSTINA",
+							"childTable": "OPSTINADETE",
+							"relationship":[{
+								"parentColumn": "OPS_OZNAKA",
+								"childColumn": 	"OPS_OZNAKA"
+							},{
+								"parentColumn": "DR_OZNAKA",
+								"childColumn": 	"DR_OZNAKA"
+							},{
+								"parentColumn": "GR_OZNAKA",
+								"childColumn": 	"GR_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						},
+						
+						{
+									
+							"name": "Grad_je_glavni_grad_drzave",
+							"labela": "GRAD_JE_GLAVNI_GRAD_DRZAVE",
+							"parentTable": "GRAD",
+							"childTable": "DRZAVA",
+							"relationship":[{
+								"parentColumn": "GR_OZNAKA",
+								"childColumn": 	"GR_OZNAKA"
+							},{
+								"parentColumn": "DR_OZNAKA",
+								"childColumn": 	"DR_OZNAKA"
+							}],
+							"dependent": "false"
+							
+						
+						},
+						{
+									
+							"name": "Grad_se_nalazi_u_drzavi",
+							"labela": "GRAD_SE_NALAZI_U_DRZAVI",
+							"parentTable": "DRZAVA",
+							"childTable": "GRAD",
+							"relationship":[{
+								"parentColumn": "DR_OZNAKA",
+								"childColumn": 	"DR_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						
+						},
+						{
+									
+							"name": "Grad_ima_opstine",
+							"labela": "GRAD_IMA_OPSTINE",
+							"parentTable": "GRAD",
+							"childTable": "OPSTINA",
+							"relationship":[{
+								"parentColumn": "GR_OZNAKA",
+								"childColumn": 	"GR_OZNAKA"
+							},{
+								"parentColumn": "DR_OZNAKA",
+								"childColumn": 	"DR_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						
+						},
+						{
+									
+							"name": "Pokrajina_u_fakultetu_kao_primer_dva_roditelja",
+							"labela": "POKRAJINA_U_FAKULTETU",
+							"parentTable": "FAKULTET",
+							"childTable": "POKRAJINA",
+							"relationship":[{
+								"parentColumn": "FAK_OZNAKA",
+								"childColumn": 	"FAK_OZNAKA"
+							}],
+							"dependent": "true"
+							
+						
+						},
+						
+					
+						{
+							"name": "Fakultet u gradu",
+							"labela": "FAKULTET_U_GRADU",
+							"parentTable": "GRAD",
+							"childTable": "FAKULTET",
+							"relationship":[{
+								"parentColumn": "GR_OZNAKA",
+								"childColumn": 	"GR_OZNAKA"
+							}],
+							"dependent": "false"
+							
+						}
+	
+					]
+				}
+			]
+		},
+		{
+		
+			"packageName": "subsistem2" ,
+			"labela": "SUBSISTEM_2",
+			"type" : "subsystem",
+			"komePripada" : "PSW_2017",
+			"package" : [
+			{
+				"packageName": "package2",
+				"labela": "PACKAGE_2",
+				"type" : "package",
+				"komePripada" : "SUBSISTEM_2",
+				"tables": [
+						{		
+			
+							"name": "Katedra" ,
+							"labela": "KATEDRA",
+							"komePripada" : "PACKAGE_2",
+							"columns":[
+							{
+								"name" : "Oznaka"   ,
+								"labela" : "KA_OZNAKA" ,
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "true",		
+								"nullValue": "false" 
+								
+							},
+							{
+								"name" : "Naziv" ,
+								"labela" :  "KA_NAZIV",
+								"dataType" : "varchar", 
+								"precision" : 4, 
+								"length": 30,
+								"primary key": "false",										
+								"nullValue": "false"										
+								
+							},
+							
+							{
+								"name" : "OznakaProfesora" ,
+								"labela" :  "PROF_OZNAKA",
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "true",										
+								"nullValue": "false"										
+								
+							}					  
+							
+						    ]
+					},	{		
+			
+							"name": "Predmet" ,
+							"labela": "PREDMET",
+							"komePripada" : "PACKAGE_2",
+							"columns":[
+							{
+								"name" : "Oznaka"   ,
+								"labela" : "PR_OZNAKA" ,
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "true",		
+								"nullValue": "false" 
+								
+							},
+							{
+								"name" : "Naziv" ,
+								"labela" :  "PR_NAZIV",
+								"dataType" : "varchar", 
+								"precision" : 4, 
+								"length": 30,
+								"primary key": "false",										
+								"nullValue": "false"										
+								
+							},
+							
+							{
+								"name" : "OznakaKatedre" ,
+								"labela" :  "KA_OZNAKA",
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "true",										
+								"nullValue": "false"										
+								
+							}					  
+							
+						    ]
+					},	{		
+			
+							"name": "Profesor" ,
+							"labela": "PROFESOR",
+							"komePripada" : "PACKAGE_2",
+							"columns":[
+							{
+								"name" : "Oznaka"   ,
+								"labela" : "PROF_OZNAKA" ,
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "true",		
+								"nullValue": "false" 
+								
+							},
+							{
+								"name" : "Naziv" ,
+								"labela" :  "PROF_NAZIV",
+								"dataType" : "varchar", 
+								"precision" : 4, 
+								"length": 30,
+								"primary key": "false",										
+								"nullValue": "false"										
+								
+							},
+							
+							{
+								"name" : "OznakaKatedre" ,
+								"labela" :  "KA_OZNAKA",
+								"dataType" : "char", 
+								"precision" : 4, 
+								"length": 10,
+								"primary key": "true",										
+								"nullValue": "false"										
+								
+							}					  
+							
+						    ]
+					}
+					
+						
+			       	],
+			        
+					"relations":[
+			
+						{		
+							"name": "Predmetpripadakatedri",
+							"labela": "PREDMET_PRIPADA_KATEDRI",
+							"parentTable": "KATEDRA",
+							"childTable": "PREDMET",
+							"relationship":[{
+								"parentColumn": "KA_OZNAKA",
+								"childColumn": "KA_OZNAKA" 
+							}],
+							"dependent": "true"
+							
+						},{		
+							"name": "Profesorpripadakatedri",
+							"labela": "PROFESOR_PRIPADA_KATEDRI",
+							"parentTable": "KATEDRA",
+							"childTable": "PROFESOR",
+							"relationship":[{
+								"parentColumn": "KA_OZNAKA",
+								"childColumn": "KA_OZNAKA" 
+							}],
+							"dependent": "true"
+							
+						}
+						
+					]	
+
+				}
+			]
+
+			} 
+		]
+		
+}
+]
+}
